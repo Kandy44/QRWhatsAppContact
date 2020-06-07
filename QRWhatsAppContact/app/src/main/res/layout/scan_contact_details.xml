@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanContactDetails">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcodeView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:zxing_scanner_layout="@layout/barcode_layout" />
+
+    <Button
+        android:id="@+id/btnTorch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/torch_text"
+        app:layout_constraintBottom_toBottomOf="@id/barcodeView"
+        app:layout_constraintRight_toRightOf="@id/barcodeView" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/barcodeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnScan"
+            android:text="@string/scan_btn_txt" />
+        <TextView
+            android:layout_marginEnd="4dp"
+            android:id="@+id/labelResult"
+            android:text="@string/result_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qr_code_result" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/scan_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="244dp"
+        android:text="Scan Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

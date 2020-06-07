@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QRWhatsAppContact</string>
+    <string name="create_contact_text">Create Qr Contact</string>
+    <string name="select_contact_text">Select a Contact</string>
+    <string name="scan_text">Scan Contact</string>
+    <string name="torch_text">Torch</string>
+    <string name="qr_code_result">NULL</string>
+    <string name="result_header">Result:</string>
+    <string name="scan_btn_txt">Scan</string>
+    <string name="request_permission_text">Request Permissions</string>
+</resources>
